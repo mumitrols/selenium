@@ -31,13 +31,13 @@ class DebitCardAppTest {
        options.addArguments("--headless");
        driver = new ChromeDriver(options);
 
-        //driver =  new ChromeDriver();
+       //driver =  new ChromeDriver();
     }
 
     @Test
     void allFieldsFilledCorrect() {
         driver.get("http://localhost:9999/");
-        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("");
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Иванов-Петров Иван");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79852452325");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.tagName("button")).click();
